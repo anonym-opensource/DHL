@@ -18,7 +18,7 @@ The C++ source codes for the experiments are in <b>exp.cpp</b>.
 
 Running these codes requires including some header files in cppheaders_202*****.zip and the Boost library (https://www.boost.org/). 
 
-After making the header files and data files ready, <b>all the experiments in our paper can be conducted by first running "generate_L_PPR()" in "exp.cpp", and then running "exp()" in "exp.cpp".</b> Make sure there is enough memory (1 TB RAM). 
+After making the header files and data files ready, <b>we can first run "generate_L_PPR()" in "exp.cpp" to generate all the initial shortest distances indexes, and then run "exp()" in "exp.cpp" to conduct all the experiments in the paper.</b> Make sure there is enough memory (1 TB RAM). 
 
 Specifically, in the terminal on a Linux server, we can compile and run the above codes using the following commands:
 ```
@@ -27,4 +27,4 @@ g++ -std=c++17 -I/home/boost_1_75_0 -I/root/cppheaders_202***** exp.cpp -lpthrea
 ```
 , where "-I/home/boost_1_75_0" is to add the path of the boost folder when compiling, "-I/root/cppheaders_202*****" is to add the path of the cppheader folder when compiling, "-lpthread" is for parallel computation, and "-O3" is for compiler optimisation.
 
-To read these C++ codes in detail, it is recommended to start from "exp()", and then go to "exp_element1()". More detailed codes in other regions can then be traced.
+To read these C++ codes in detail, it is recommended to start from "exp()", and then go to "exp_element1()". More detailed codes in other regions can then be traced. 

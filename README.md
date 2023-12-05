@@ -28,7 +28,7 @@ g++ -std=c++17 -I/home/boost_1_75_0 -I/root/cppheaders_202***** exp.cpp -lpthrea
 , where "-I/home/boost_1_75_0" is to add the path of the boost folder when compiling, "-I/root/cppheaders_202*****" is to add the path of the cppheader folder when compiling, "-lpthread" is for parallel computation, and "-O3" is for compiler optimisation.
 
 To read these C++ codes in detail, it is recommended to start from "exp()", and then go to "exp_element1()". More detailed codes in other regions can then be traced. In particular,
-1. "build_in_progress/HL/dynamic/PLL_dynamic.h" contains codes of PLL to generate L and PPR.
+- "build_in_progress/HL/dynamic/PLL_dynamic.h" contains codes of PLL to generate L and PPR.
 2. "build_in_progress/HL/dynamic/WeightIncreaseMaintenance_improv_multiThread.h" contains codes of the proposed weight increase maintenance algorithm (FastInM).
 3. "build_in_progress/HL/dynamic/WeightDecreaseMaintenance_improv_multiThread.h" contains codes of the proposed weight decrease maintenance algorithm (FastDem).
 4. "build_in_progress/HL/dynamic/WeightIncrease2021_multiThread.h" contains codes of the existing InAsyn algorithm.

@@ -29,9 +29,9 @@ g++ -std=c++17 -I/home/boost_1_75_0 -I/root/cppheaders_202***** exp.cpp -lpthrea
 
 To read these C++ codes in detail, it is recommended to start from "exp()". More detailed codes in other regions can then be traced. In particular, in the cppheaders_202***** folder,
 - "build_in_progress/HL/dynamic/PLL_dynamic.h" contains codes of <b>PLL</b> to generate L and PPR.
-- "build_in_progress/HL/dynamic/WeightIncreaseMaintenance_improv_multiThread.h" contains codes of the proposed weight increase maintenance algorithm (<b>FastInM</b>).
-- "build_in_progress/HL/dynamic/WeightDecreaseMaintenance_improv_multiThread.h" contains codes of the proposed weight decrease maintenance algorithm (<b>FastDeM</b>).
-- "build_in_progress/HL/dynamic/WeightIncrease2021_multiThread.h" contains codes of the existing <b>InAsyn</b> algorithm.
-- "build_in_progress/HL/dynamic/WeightDecrease2021_multiThread.h" contains codes of the existing <b>DeAsyn</b> algorithm.
-- "build_in_progress/HL/dynamic/WeightDecrease2014_multiThread.h" contains codes of the existing <b>DePLL</b> algorithm.
-- "build_in_progress/HL/dynamic/WeightIncrease2019_multiThread.h" contains codes of the existing <b>InPLL</b> algorithm.
+- "build_in_progress/HL/dynamic/WeightIncreaseMaintenance_improv.h" contains codes of the proposed weight increase maintenance algorithm (<b>FastInM</b>).
+- "build_in_progress/HL/dynamic/WeightDecreaseMaintenance_improv.h" contains codes of the proposed weight decrease maintenance algorithm (<b>FastDeM</b>).
+- "build_in_progress/HL/dynamic/WeightIncrease2021.h" contains codes of the existing <b>InAsyn</b> algorithm.
+- "build_in_progress/HL/dynamic/WeightDecrease2021.h" contains codes of the existing <b>DeAsyn</b> algorithm.
+- "build_in_progress/HL/dynamic/WeightDecrease2014.h" contains codes of the existing <b>DePLL</b> algorithm.
+- "build_in_progress/HL/dynamic/WeightIncrease2019.h" contains codes of the existing <b>InPLL</b> algorithm.

@@ -8,12 +8,12 @@ using namespace std;
 boost::random::mt19937 boost_random_time_seed{ static_cast<std::uint32_t>(std::time(0)) };
 
 #include <build_in_progress/HL/dynamic/PLL_dynamic.h>
-#include <build_in_progress/HL/dynamic/WeightIncreaseMaintenance_improv_multiThread.h>
-#include <build_in_progress/HL/dynamic/WeightDecreaseMaintenance_improv_multiThread.h>
-#include <build_in_progress/HL/dynamic/WeightIncrease2021_multiThread.h>
-#include <build_in_progress/HL/dynamic/WeightDecrease2021_multiThread.h>
-#include <build_in_progress/HL/dynamic/WeightDecrease2014_multiThread.h>
-#include <build_in_progress/HL/dynamic/WeightIncrease2019_multiThread.h>
+#include <build_in_progress/HL/dynamic/WeightIncreaseMaintenance_improv.h>
+#include <build_in_progress/HL/dynamic/WeightDecreaseMaintenance_improv.h>
+#include <build_in_progress/HL/dynamic/WeightIncrease2021.h>
+#include <build_in_progress/HL/dynamic/WeightDecrease2021.h>
+#include <build_in_progress/HL/dynamic/WeightDecrease2014.h>
+#include <build_in_progress/HL/dynamic/WeightIncrease2019.h>
 #include <build_in_progress/HL/sort_v/graph_hash_of_mixed_weighted_update_vertexIDs_by_degrees.h>
 #include <graph_hash_of_mixed_weighted/two_graphs_operations/graph_hash_of_mixed_weighted_to_graph_v_of_v_idealID_2.h>
 #include <graph_hash_of_mixed_weighted/random_graph/graph_hash_of_mixed_weighted_generate_random_graph.h>
@@ -28,7 +28,7 @@ boost::random::mt19937 boost_random_time_seed{ static_cast<std::uint32_t>(std::t
 
 void generate_L_PPR() {
 
-	vector<string> data_names = { "amazon", "book" };
+	vector<string> data_names = { "condmat", "gnutella", "amazon", "book", "hyves", "skitter" };
 	string path = "dynamicHL//";
 	int thread_num = 50;
 	ThreadPool pool_dynamic(thread_num);
@@ -1176,10 +1176,9 @@ void exp() {
 }
 
 
-
 void exp_case() {
 
-	vector<string> data_names = { "condmat", "gnutella" };
+	vector<string> data_names = { "condmat", "gnutella", "amazon", "book", "hyves", "skitter" };
 	int change_times = 100, thread_num = 80;
 
 	for (auto data_name : data_names) {
@@ -1194,18 +1193,18 @@ void exp_case() {
 		graph_v_of_v_idealID instance_graph;
 		vector<_edge> selected_edges;
 
-		string weight_type = "Jaccard";
+		string weight_type = "random";
 
 		graph_hash_of_mixed_weighted instance_graph_initial_hash = graph_hash_of_mixed_weighted_binary_read(path + data_name + "_" + weight_type + ".bin");
 		graph_v_of_v_idealID instance_graph_initial = graph_hash_of_mixed_weighted_to_graph_v_of_v_idealID_2(instance_graph_initial_hash, instance_graph_initial_hash.hash_of_vectors.size());
 		graph_hash_of_mixed_weighted_two_hop_case_info_v1 mm_initial;
 		binary_read_PPR(path + data_name + "_PPR_" + weight_type + ".bin", mm_initial.PPR);
 		binary_read_vector_of_vectors(path + data_name + "_L_" + weight_type + ".bin", mm_initial.L);
-		string file_name = "exp_case_" + data_name + ".csv";
+		string file_name = "exp_case_" + weight_type + "_" + data_name + ".csv";
 		cout << file_name << endl;
 		outputFile.open(file_name);
 
-		outputFile << "change_v1,change_v2,change_w0,change_w1,change_time,query_v1,query_v2,query_time" << endl;
+		outputFile << "change_v1,change_v2,change_w0,change_w1,query_v1,query_v2,query_time" << endl;
 
 		double change_time = 0, query_v1 = 0, query_v2 = 0, query_time = 0;
 
@@ -1286,7 +1285,7 @@ void exp_case() {
 					}
 
 					outputFile << selected_edge.v1 << "," << selected_edge.v2 << "," << selected_edge_weight << "," << selected_edge.ec
-						<< "," << change_time << "," << query_v1 << "," << query_v2 << "," << query_time << endl;
+						<< "," << query_v1 << "," << query_v2 << "," << query_time << endl;
 				}
 			}
 		}
@@ -1313,7 +1312,6 @@ void exp_check() {
 
 	cout << PPR_size_1 << "   " << PPR_size_2 << endl;
 }
-
 
 
 int main()

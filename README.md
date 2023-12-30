@@ -31,7 +31,7 @@ To read these C++ codes in detail, it is recommended to start from "exp()". More
 
 # Settings
 
-To compile and run the above codes, preparing the environment as follows:
+To compile and run the above codes, prepare the environment as follows:
 
 - downlaod and unzip the header files in cppheaders_202*****.zip
 - downlaod the Boost library at https://www.boost.org

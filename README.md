@@ -45,5 +45,5 @@ g++ -std=c++17 -I/home/boost_1_75_0 -I/root/cppheaders_202***** exp.cpp -lpthrea
 ```
 , where "-I/home/boost_1_75_0" is to add the path of the boost folder when compiling, "-I/root/cppheaders_202*****" is to add the path of the cppheader folder when compiling, "-lpthread" is for parallel computation, and "-O3" is for compiler optimisation.
 
-Specifically, <b>we can first run "generate_L_PPR()" in "exp.cpp" to generate all the initial shortest distances indexes, and then run "exp()" in "exp.cpp" to conduct all the experiments in the paper.</b> The experiment results will be saved in CSV files.
+Specifically, <b>we can first run "generate_L_PPR()" in "exp.cpp" to generate all the initial shortest distances indexes, and then run "exp()" in "exp.cpp" to conduct all the experiments in the paper.</b> 
 

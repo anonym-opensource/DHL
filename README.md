@@ -36,7 +36,7 @@ To compile and run exp.cpp, prepare the environment as follows:
 - downlaod and unzip the header files in cppheaders_202*****.zip
 - downlaod the Boost library at https://www.boost.org
 - downlaod and unzip the datasets
-- get a server with enough memory (1 TB RAM) and hard disck space (1 TB). (to only run the small CondMat and Gnutella datasets, just personal computers are OK)
+- get a server with enough memory (1 TB RAM) and hard disk space (1 TB). (to only run the small CondMat and Gnutella datasets, just personal computers are OK)
 
 After preparing the environment as suggested above, in the terminal on a Linux server, we can compile and run exp.cpp using the following commands:
 ```
@@ -46,4 +46,6 @@ g++ -std=c++17 -I/home/boost_1_75_0 -I/root/cppheaders_202***** exp.cpp -lpthrea
 , where "-I/home/boost_1_75_0" is to add the path of the boost folder when compiling, "-I/root/cppheaders_202*****" is to add the path of the cppheader folder when compiling, "-lpthread" is for parallel computation, and "-O3" is for compiler optimisation.
 
 Specifically, <b>we can first run "generate_L_PPR()" in "exp.cpp" to generate all the initial shortest distances indexes, and then run "exp()" in "exp.cpp" to conduct all the experiments in the paper.</b> 
+
+All the experiments in the paper are conducted on a Linux server with Ubuntu system, 1 TB RAM and 2 TB hard disk space.
 

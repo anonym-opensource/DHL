@@ -20,7 +20,7 @@ Running these codes requires including some header files in cppheaders_202*****.
 
 After making the header files and data files ready, <b>we can first run "generate_L_PPR()" in "exp.cpp" to generate all the initial shortest distances indexes, and then run "exp()" in "exp.cpp" to conduct all the experiments in the paper.</b> Make sure there is enough memory (1 TB RAM) and hard disck space (1 TB). 
 
-After prepareing the environment as suggested above, in the terminal on a Linux server, we can compile and run the above codes using the following commands:
+After preparing the environment as suggested above, in the terminal on a Linux server, we can compile and run the above codes using the following commands:
 ```
 g++ -std=c++17 -I/home/boost_1_75_0 -I/root/cppheaders_202***** exp.cpp -lpthread -O3 -o A.out
 ./A.out

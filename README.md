@@ -35,6 +35,7 @@ To compile and run the above codes, preparing the environment as follows:
 
 - downlaod and unzip the header files in cppheaders_202*****.zip
 - downlaod the Boost library at https://www.boost.org
+- downlaod and unzip the datasets
 - get a server with enough memory (1 TB RAM) and hard disck space (1 TB). (to only run the small CondMat and Gnutella datasets, just personal computers are OK)
 
 After preparing the environment as suggested above, in the terminal on a Linux server, we can compile and run exp.cpp using the following commands:

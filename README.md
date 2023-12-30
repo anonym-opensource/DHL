@@ -14,22 +14,9 @@ The data files are zipped together, and should be unzipped first. There are 6 da
 
 # C++ codes 
 
-The C++ source codes for the experiments are in <b>exp.cpp</b>. 
+The codes for conducting the experiments are in <b>exp.cpp</b>. 
 
-To compile and run the above codes, preparing the environment as follows:
-
-- item downlaod and unzip the header files in cppheaders_202*****.zip
-
-Running these codes requires including some header files in cppheaders_202*****.zip, and the Boost library (which can be downloaded at https://www.boost.org/). 
-
-After making the header files and data files ready, <b>we can first run "generate_L_PPR()" in "exp.cpp" to generate all the initial shortest distances indexes, and then run "exp()" in "exp.cpp" to conduct all the experiments in the paper.</b> Make sure there is enough memory (1 TB RAM) and hard disck space (1 TB). 
-
-After preparing the environment as suggested above, in the terminal on a Linux server, we can compile and run the above codes using the following commands:
-```
-g++ -std=c++17 -I/home/boost_1_75_0 -I/root/cppheaders_202***** exp.cpp -lpthread -O3 -o A.out
-./A.out
-```
-, where "-I/home/boost_1_75_0" is to add the path of the boost folder when compiling, "-I/root/cppheaders_202*****" is to add the path of the cppheader folder when compiling, "-lpthread" is for parallel computation, and "-O3" is for compiler optimisation.
+The codes for the algorithms are in the header files in cppheaders_202*****.zip.
 
 To read these C++ codes in detail, it is recommended to start from "exp()". More detailed codes in other regions can then be traced. In particular, in the cppheaders_202***** folder,
 - "build_in_progress/HL/dynamic/PLL_dynamic.h" contains codes of <b>PLL</b> to generate L and PPR.
@@ -39,3 +26,23 @@ To read these C++ codes in detail, it is recommended to start from "exp()". More
 - "build_in_progress/HL/dynamic/WeightDecrease2021.h" contains codes of the existing <b>DeAsyn</b> algorithm.
 - "build_in_progress/HL/dynamic/WeightDecrease2014.h" contains codes of the existing <b>DePLL</b> algorithm.
 - "build_in_progress/HL/dynamic/WeightIncrease2019.h" contains codes of the existing <b>InPLL</b> algorithm.
+
+
+
+# Settings
+
+To compile and run the above codes, preparing the environment as follows:
+
+- downlaod and unzip the header files in cppheaders_202*****.zip
+- downlaod the Boost library at https://www.boost.org
+- get a server with enough memory (1 TB RAM) and hard disck space (1 TB). (to only run the small CondMat and Gnutella datasets, just personal computers are OK)
+
+After preparing the environment as suggested above, in the terminal on a Linux server, we can compile and run exp.cpp using the following commands:
+```
+g++ -std=c++17 -I/home/boost_1_75_0 -I/root/cppheaders_202***** exp.cpp -lpthread -O3 -o A.out
+./A.out
+```
+, where "-I/home/boost_1_75_0" is to add the path of the boost folder when compiling, "-I/root/cppheaders_202*****" is to add the path of the cppheader folder when compiling, "-lpthread" is for parallel computation, and "-O3" is for compiler optimisation.
+
+Specifically, <b>we can first run "generate_L_PPR()" in "exp.cpp" to generate all the initial shortest distances indexes, and then run "exp()" in "exp.cpp" to conduct all the experiments in the paper.</b> The experiment results will be saved in CSV files.
+

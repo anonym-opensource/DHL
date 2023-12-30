@@ -16,7 +16,7 @@ The data files are zipped together, and should be unzipped first. There are 6 da
 
 The C++ source codes for the experiments are in <b>exp.cpp</b>. 
 
-Running these codes requires including some header files in cppheaders_202*****.zip and the Boost library (https://www.boost.org/). 
+Running these codes requires including some header files in cppheaders_202*****.zip, and the Boost library (which can be downloaded at https://www.boost.org/). 
 
 After making the header files and data files ready, <b>we can first run "generate_L_PPR()" in "exp.cpp" to generate all the initial shortest distances indexes, and then run "exp()" in "exp.cpp" to conduct all the experiments in the paper.</b> Make sure there is enough memory (1 TB RAM) and hard disck space (1 TB). 
 

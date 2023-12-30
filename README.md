@@ -47,5 +47,6 @@ g++ -std=c++17 -I/home/boost_1_75_0 -I/root/cppheaders_202***** exp.cpp -lpthrea
 
 Specifically, <b>we can first run "generate_L_PPR()" in "exp.cpp" to generate all the initial shortest distances indexes, and then run "exp()" in "exp.cpp" to conduct all the experiments in the paper.</b> 
 
-All the experiments in the paper are conducted via the above approach, on a Linux server with Ubuntu system, 1 TB RAM and 2 TB hard disk space.
+All the experiments in the paper are conducted via the above approach, on a Linux server with the Ubuntu 20.04.1 system, two Intel
+Xeon Gold 6342 processors, 1 TB RAM and 2 TB hard disk space.
 
